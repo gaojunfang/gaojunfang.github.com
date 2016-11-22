@@ -1,0 +1,67 @@
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+//混合
+.border(@color:#e7e7e7){
+  border: 1px solid @color;
+}
+.style(@width;@height){
+  width: @width;
+  height:@height;
+}
+.pos(r,@t,@l){
+  position: relative;
+  top: @t;
+  left: @l;
+}
+.pos(a,@t,@l){
+  position: absolute;
+  top: @t;
+  left: @l;
+}
+.pos(f,@t,@l){
+  position: fixed;
+  top: @t;
+  left: @l;
+}
+/*基本资料*/
+.basic-data{
+  background:url("../img/bg2.jpg") no-repeat;
+  background-size:100% 100%;
+  overflow: hidden;
+  a{
+    font-size: 24px;
+  }
+  section{
+    .small-portrait {
+      @keyframes portrait {
+        0% {transform: translate(-3000px, 0);}
+        50% {transform:  translate(300px, 0);}
+        100% {transform: scale(1)}
+      }
+      animation: portrait 2s;
+    }
+    .personal{
+      margin-top: 60px;
+      @keyframes personal {
+        0% {transform: translate(3000px, 0);}
+        50% {transform:  translate(-300px, 0);}
+        100% {transform: scale(1)}
+      }
+      animation: personal 2s;
+    }
+    margin-top: 50px;
+    .down{
+      margin-top: 70px;
+    }
+
+  }
+}

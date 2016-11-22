@@ -1,0 +1,55 @@
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*基本资料*/
+.basic-data {
+  background: url("../img/bg2.jpg") no-repeat;
+  background-size: 100% 100%;
+  overflow: hidden;
+}
+.basic-data a {
+  font-size: 24px;
+}
+.basic-data section {
+  margin-top: 50px;
+}
+.basic-data section .small-portrait {
+  animation: portrait 2s;
+}
+@keyframes portrait {
+  0% {
+    transform: translate(-3000px, 0);
+  }
+  50% {
+    transform: translate(300px, 0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.basic-data section .personal {
+  margin-top: 60px;
+  animation: personal 2s;
+}
+@keyframes personal {
+  0% {
+    transform: translate(3000px, 0);
+  }
+  50% {
+    transform: translate(-300px, 0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.basic-data section .down {
+  margin-top: 70px;
+}

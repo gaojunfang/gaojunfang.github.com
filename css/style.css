@@ -1,0 +1,89 @@
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*头部*/
+.basic-data header {
+  padding: 30px 45px;
+}
+.basic-data header a {
+  color: #fff;
+  margin-left: 14px;
+  text-decoration: none;
+  float: right;
+  transition: 2s;
+  padding: 6px 10px;
+}
+.basic-data header a:hover {
+  color: #f60;
+  border-bottom: 2px solid #ff6600;
+}
+.basic-data header span {
+  float: left;
+  color: #fff;
+  font-size: 40px;
+  margin-top: -10px;
+}
+.basic-data header span:hover {
+  text-shadow: 1px 0  6px  #f60;
+  letter-spacing: 6px;
+}
+.basic-data section {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+}
+.basic-data section .small-portrait {
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 16px #fff, 0 0 6px #fff;
+  position: relative;
+  margin: 0 auto;
+}
+.basic-data section .small-portrait img {
+  width: 100%;
+}
+.basic-data section figcaption {
+  margin-top: 30px;
+}
+.basic-data section .down {
+  width: 50px;
+  height: 50px;
+  background: url("../img/icon.png");
+  margin: 0 auto;
+  transition: 1s all ease;
+  -webkit-transition: 1s all ease;
+  overflow: hidden;
+}
+@keyframes nextPage {
+  from {
+    top: 0;
+  }
+  to {
+    top: 45px;
+  }
+}
+.basic-data section .down span {
+  display: block;
+  position: relative;
+  top: 0;
+  width: 18px;
+  height: 20px;
+  background-image: url("../img/icon.png");
+  background-repeat: no-repeat;
+  background-position: -108px -13px;
+  margin: 0 auto;
+  animation: nextPage 2s infinite;
+}
+.basic-data section .personal {
+  line-height: 1.8;
+}
