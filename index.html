@@ -12,14 +12,16 @@
     <script src="js/index.js"></script>
 </head>
 <body>
-    <div class="basic-data page">
+    <div class="basic-data page" id="page1">
         <header class="clearfix">
             <span>Resume</span>
-            <a href="#">基本资料</a>
-            <a href="#">专业技能</a>
-            <a href="#">工作经历</a>
-            <a href="#">项目经验</a>
-            <a href="#">自我评价</a>
+            <div>
+                <a href="#page2">基本资料</a>
+                <a href="#">专业技能</a>
+                <a href="#">工作经历</a>
+                <a href="#">项目经验</a>
+                <a href="#">自我评价</a>
+            </div>
         </header>
         <section>
             <figure>
@@ -27,7 +29,7 @@
                     <img src="img/head.jpg" alt="">
                 </div>
                 <figcaption>
-                    <p>金色向日葵，勇敢地去追求自己想要的幸福</p>
+                    <p>如果debugging是一种消灭bug的过程,那编程就一定是把bug放进去的过程。</p>
                 </figcaption>
             </figure>
             <div class="personal">
@@ -38,13 +40,33 @@
             <div class="down"><span></span></div>
         </section>
     </div>
-    <section class="page">
+    <section class="page" id="page2">
         <h5>基本资料</h5>
-        <div>
+        <div class="clearfix text-outer">
             <div class="small-portrait">
                 <img src="img/head.jpg" alt="">
             </div>
-            <div class="text"></div>
+            <div class="text-ul clearfix">
+                <ul>
+                    <li>姓名 | 高军芳</li>
+                    <li>性别 | 女</li>
+                    <li>出生 | 1994.10.09</li>
+                    <li>居住 | 北京市</li>
+                    <li>学历 | 大专</li>
+                </ul>
+                <ul>
+                    <li>手机 | 188-1149-8313</li>
+                    <li>邮箱 | gaojunfang1009@sina.cn</li>
+                    <li>QQ号 | 1359111027</li>
+                    <li>户籍 | 河北省张家口市</li>
+                    <li>专业 | 计算机应用技术</li>
+                </ul>
+            </div>
+        </div>
+        <div class="work-experience">
+            <h4>工作经历</h4>
+            <p>一、2015.9月至2016.9月在北京仁和汇智信息技术有限公司任职前端。</p>
+            <p>二、2013.2月至2015.9月在国家知识产权出版社学习并担任前端。</p>
         </div>
     </section>
 </body>

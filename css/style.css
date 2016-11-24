@@ -10,14 +10,23 @@
   white-space: nowrap;
 }
 /*头部*/
+.basic-data {
+  background: url("../img/bg-2.jpg") no-repeat;
+  background-size: 100%;
+  overflow: hidden;
+}
 .basic-data header {
   padding: 30px 45px;
+}
+.basic-data header div {
+  float: right;
+  display: inline-block;
 }
 .basic-data header a {
   color: #fff;
   margin-left: 14px;
   text-decoration: none;
-  float: right;
+  float: left;
   transition: 2s;
   padding: 6px 10px;
 }
@@ -86,4 +95,43 @@
 }
 .basic-data section .personal {
   line-height: 1.8;
+}
+/*基本资料*/
+body {
+  background: #f4f4f4;
+}
+#page2 {
+  font-size: 26px;
+  padding: 60px;
+}
+#page2 .small-portrait {
+  width: 220px;
+  height: 220px;
+  border-radius: 50% ;
+  overflow: hidden;
+  float: left;
+}
+#page2 .small-portrait img {
+  width: 100%;
+}
+#page2 h5 {
+  text-align: center;
+  font-size: 30px;
+}
+#page2 .text-ul {
+  width: 70%;
+  float: right;
+  line-height: 2;
+}
+#page2 .text-ul ul {
+  float: left;
+  margin-left: 10%;
+}
+#page2 .text-outer,
+#page2 .work-experience {
+  margin: 100px auto;
+  width: 80%;
+}
+#page2 .work-experience p {
+  margin-left: 50px;
 }

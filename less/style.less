@@ -34,14 +34,20 @@
 }
 /*头部*/
 .basic-data{
-  //background:url("../img/bg2.jpg") no-repeat;
+  background:url("../img/bg-2.jpg") no-repeat;
+  background-size:100%;
+  overflow: hidden;
   header{
     padding:30px 45px;
+    div{
+      float: right;
+      display: inline-block;
+    }
     a{
       color: #fff;
       margin-left: 14px;
       text-decoration: none;
-      float: right;
+      float: left;
       transition: 2s;
       padding: 6px 10px;
       &:hover{
@@ -60,7 +66,6 @@
       }
     }
   }
-
 
   section{
     color: #fff;
@@ -106,6 +111,47 @@
     }
     .personal{
       line-height: 1.8;
+    }
+  }
+}
+
+/*基本资料*/
+body{
+  background: #f4f4f4;
+}
+#page2{
+  font-size: 26px;
+  padding: 60px;
+  .small-portrait{
+    .style(220px,220px);
+    border-radius:50% ;
+    overflow: hidden;
+    float: left;
+    img{
+      width: 100%;
+    }
+  }
+  h5{
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .text-ul {
+    width: 70%;
+    float: right;
+    line-height: 2;
+    ul {
+      float: left;
+      margin-left: 10%;
+    }
+  }
+  .text-outer,.work-experience{
+    margin: 100px auto;
+    width: 80%;
+  }
+  .work-experience{
+    p{
+      margin-left: 50px;
     }
   }
 }
