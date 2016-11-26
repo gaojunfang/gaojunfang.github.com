@@ -39,7 +39,7 @@
   overflow: hidden;
   header{
     padding:30px 45px;
-    div{
+    nav{
       float: right;
       display: inline-block;
     }
@@ -119,6 +119,17 @@
 body{
   background: #f4f4f4;
 }
+
+.page{
+  box-sizing: border-box;
+  overflow: hidden;
+  display:none;
+  transition: 1s;
+  h5{
+    text-align: center;
+    font-size: 30px;
+  }
+}
 #page2{
   font-size: 26px;
   padding: 60px;
@@ -130,10 +141,6 @@ body{
     img{
       width: 100%;
     }
-  }
-  h5{
-    text-align: center;
-    font-size: 30px;
   }
 
   .text-ul {
@@ -152,6 +159,49 @@ body{
   .work-experience{
     p{
       margin-left: 50px;
+    }
+  }
+}
+
+#page3{
+  padding: 60px;
+  font-size: 22px;
+  .skill-canvas{
+    width: 50%;
+    float: left;
+    background: red;
+  }
+  .skill-text{
+    margin-top: 30px;
+    width: 50%;
+    float: right;
+  }
+}
+aside{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  ul li {
+    position: relative;
+    height: 30px;
+    a{
+      display: block;
+      .style(21px,21px);
+      background-image: url("../img/dot.png");
+      background-position: 5px 5px;
+      background-repeat: no-repeat;
+      &:hover{
+        background-position:0 bottom;
+      }
+    }
+    span{
+      position: absolute;
+      top: 0;
+      width: 0px;
+      display: none;
+      left:-80px;
+      color: #80d6f2;
+      transition: 1s;
     }
   }
 }
