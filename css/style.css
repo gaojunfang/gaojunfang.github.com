@@ -146,9 +146,25 @@ body {
   font-size: 22px;
 }
 #page3 .skill-canvas {
+  margin-top: 30px;
   width: 50%;
   float: left;
-  background: red;
+}
+#page3 .skill-canvas .canvas_con {
+  width: 160px;
+  height: 160px;
+  float: left;
+  margin: 10px 15px;
+  position: relative;
+}
+#page3 .skill-canvas .canvas_con .text_con {
+  width: 120px;
+  height: 80px;
+  position: absolute;
+  top: 25px;
+  left: 0;
+  text-align: center;
+  padding: 20px;
 }
 #page3 .skill-text {
   margin-top: 30px;
@@ -183,4 +199,122 @@ aside ul li span {
   left: -80px;
   color: #80d6f2;
   transition: 1s;
+}
+#page5 {
+  padding: 60px 0 ;
+}
+#page5 .img-outer {
+  width: 100%;
+  height: 300px;
+  margin-top: 30px;
+  background: url("../img/number1.gif") repeat;
+  position: relative;
+  overflow: hidden;
+}
+#page5 .img-outer .img-bg {
+  width: 100%;
+  height: 100%;
+  background: rgba(115, 224, 179, 0.72);
+}
+#page6 {
+  padding: 60px;
+}
+#page6 .contact_detail {
+  padding: 0 60px;
+}
+#page6 ul.con_style {
+  overflow: hidden;
+  padding: 0 0 20px 0;
+}
+#page6 ul.con_style li {
+  width: 33.33%;
+  float: left;
+  margin: 20px 0;
+  overflow: hidden;
+}
+#page6 ul.con_style li span {
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin: 0 auto 20px;
+  background: url("../img/icon.png");
+}
+#page6 ul.con_style li p {
+  text-align: center;
+  font-size: 26px;
+}
+#page6 ul.con_style li p a {
+  color: #333;
+}
+#page6 ul.con_style li:nth-child(1) span {
+  background-position: 0 -70px;
+}
+#page6 ul.con_style li:nth-child(2) span {
+  background-position: -50px -70px;
+}
+#page6 ul.con_style li:nth-child(3) span {
+  background-position: -100px -70px;
+}
+#page6 .contact_info {
+  width: 100%;
+}
+#page6 .contact_info form {
+  width: 100%;
+  overflow: hidden;
+  padding: 5px 0;
+}
+#page6 .contact_info form label {
+  width: 33.33%;
+  padding: 0 10px 0 0;
+  height: 70px;
+  float: left;
+  box-sizing: border-box;
+}
+#page6 .contact_info form label p {
+  color: red;
+  line-height: 2rem;
+  padding: 0 12px;
+}
+#page6 .contact_info form label:nth-child(3) {
+  padding: 0;
+}
+#page6 .contact_info form label:nth-child(4) {
+  width: 100%;
+  height: 215px;
+  padding: 0;
+}
+#page6 .contact_info form input {
+  outline: none;
+  padding: 12px;
+  font-size: 1.4rem;
+  border: 1px solid #e5e5e5;
+  background: none;
+  box-sizing: border-box;
+}
+#page6 .contact_info form input[type="text"] {
+  width: 100%;
+  float: left;
+  background: #ffffff;
+  color: #333;
+}
+#page6 .contact_info form textarea {
+  width: 100%;
+  height: 180px;
+  background: #ffffff;
+  resize: none;
+  color: #333;
+  outline: none;
+  padding: 12px;
+  font-size: 1.4rem;
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+}
+#page6 .contact_info form button {
+  color: #fff;
+  padding: 0.6em 1.4em;
+  font-size: 1.4rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #55C1E5;
+  background: #55C1E5;
 }

@@ -27,6 +27,10 @@ function addWheel(obj,fn){
         addEvent(obj,'mousewheel',wheel);
     }
 }
+//角度转弧度
+function d2a(n) {
+    return Math.PI/180*n;
+}
 
 document.addEventListener('DOMContentLoaded',function () {
     //获取元素
@@ -66,6 +70,49 @@ document.addEventListener('DOMContentLoaded',function () {
 
     //画技能
     (function () {
+        var oHtml5 = document.querySelector('#html5');
+        var oH5c = oHtml5.getContext('2d');
+        var oCss3 = document.querySelector('#css3');
+        var oC3c = oCss3.getContext('2d');
+        var oJs = document.querySelector('#js');
+        var oJsc = oJs.getContext('2d');
+        var oJq = document.querySelector('#jq');
+        var oJqc = oJq.getContext('2d');
+        var oBs = document.querySelector('#bs');
+        var oBsc = oBs.getContext('2d');
+        var oPs = document.querySelector('#ps');
+        var oPsc = oPs.getContext('2d');
+        var canW = 160;
+        var canR = 70;
+        var deg = -90;
+        function strkeSkill(gd,n,color) {
+            function strokeCan(deg) {
+                gd.clearRect(0,0,oHtml5.width,oHtml5.height);
+                gd.beginPath()
+                gd.strokeStyle = color;
+                gd.lineWidth = 10;
+                gd.arc(canW/2,canW/2,canR,d2a(-90),d2a(deg),false);
+                gd.stroke();
+            }
+            gd.timer = setInterval(function () {
+                var oCan = document.querySelector('#page3');
+                if(oCan.style.display == 'block'){
+                    deg+=4;
+                    strokeCan(deg);
+                    console.log(deg);
+                    if(deg>234){
+                        clearInterval(gd.timer);
+                    }
+                }
+            },30)
+        }
+        strkeSkill(oH5c,314,"#F1652A");
+        strkeSkill(oC3c,314,"#409AD8");
+        strkeSkill(oJsc,180,"#ECB12C");
+        strkeSkill(oJqc,198,"#75B143");
+        strkeSkill(oBsc,162,"#583F85");
+        strkeSkill(oPsc,198,"#031A3A");
+
 
     })();
     //右侧按钮
@@ -90,13 +137,9 @@ document.addEventListener('DOMContentLoaded',function () {
                 }
                 aPage[this.dataset.index].style.display = 'block';
             }
-
         }
-
     })();
     //设置鼠标滚轮
-    (function () {
-
-    })();
+    
     
 },false)
