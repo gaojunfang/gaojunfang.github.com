@@ -57,6 +57,7 @@
   box-shadow: 0 0 16px #fff, 0 0 6px #fff;
   position: relative;
   margin: 0 auto;
+  font-size: 24px;
 }
 .basic-data section .small-portrait img {
   width: 100%;
@@ -133,6 +134,9 @@ body {
   float: left;
   margin-left: 10%;
 }
+#page2 .text-ul ul:nth-child(1) {
+  margin-left: 0;
+}
 #page2 .text-outer,
 #page2 .work-experience {
   margin: 100px auto;
@@ -140,6 +144,7 @@ body {
 }
 #page2 .work-experience p {
   margin-left: 50px;
+  font-size: 24px;
 }
 #page3 {
   padding: 60px;
@@ -199,6 +204,19 @@ aside ul li span {
   left: -80px;
   color: #80d6f2;
   transition: 1s;
+}
+#page4 {
+  padding: 60px;
+}
+#page4 .project-list {
+  margin-top: 30px;
+}
+#page4 .project-list ul li {
+  width: 320px;
+  height: 250px;
+  background: red;
+  float: left;
+  margin: 12px;
 }
 #page5 {
   padding: 60px 0 ;
