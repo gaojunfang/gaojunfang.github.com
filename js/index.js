@@ -31,6 +31,19 @@ function addWheel(obj,fn){
 function d2a(n) {
     return Math.PI/180*n;
 }
+//弧度转角度
+function a2d(n) {
+    return 180/Math.PI*n;
+}
+
+//获取行间样式
+function getStyle(obj,name) {
+    if(obj.currentStyle){
+        return obj.currentStyle[name];
+    }else{
+        return getComputedStyle(obj,false)[name];
+    }
+}
 
 document.addEventListener('DOMContentLoaded',function () {
     //获取元素
@@ -44,7 +57,7 @@ document.addEventListener('DOMContentLoaded',function () {
         //设置页面跳转
         // aPage[0].style.transform = 'scale(1)';
         // aPage[0].style.height = height+'px';
-        aPage[0].style.display = 'block';
+        aPage[3].style.display = 'block';
         var oNav = document.querySelector('nav');
         var aA = oNav.querySelectorAll('a');
         for(var i=0; i<aA.length; i++){
@@ -139,7 +152,70 @@ document.addEventListener('DOMContentLoaded',function () {
             }
         }
     })();
-    //设置鼠标滚轮
-    
+    //项目经验悬浮
+    (function () {
+        var width = document.documentElement.clientWidth || document.body.clientWidth;
+        if(width>=992){
+            var oList = document.querySelector('.project-list');
+            var aLi = oList.querySelectorAll('li');
+            var aDivBg = oList.querySelectorAll('.pos-bg')
+            for(var i = 0; i<aLi.length; i++){
+                function getDir(ev,oLi){
+                    var x=ev.clientX;
+                    var y=ev.clientY;
+                    //console.log(oLi)
+                    var a=(oLi.offsetTop+oLi.offsetHeight/2)-y;
+                    var b=x-(oLi.offsetLeft+oLi.offsetWidth/2);
+
+                    //角度
+                    var deg=a2d(Math.atan2(a,b));
+                    return Math.round((deg+180)/90)%4;
+                }
+
+                (function (index) {
+                    aLi[i].onmouseenter = function (ev) {
+                        console.log(getDir(ev,aLi[index]))
+                        switch (getDir(ev,aLi[index])) {
+                         case 0:
+                         aDivBg[index].style.left = -aLi[0].offsetWidth + 'px';
+                         aDivBg[index].style.top = 0 + 'px';
+                         break;
+                         case 1:
+                         aDivBg[index].style.left = 0 + 'px';
+                         aDivBg[index].style.top = aLi[0].offsetHeight + 'px';
+
+                         break;
+                         case 2:
+                         aDivBg[index].style.left = aLi[0].offsetWidth + 'px';
+                         aDivBg[index].style.top = 0 + 'px';
+                         break;
+                         case 3:
+                         aDivBg[index].style.left = 0 + 'px';
+                         aDivBg[index].style.top = -aLi[0].offsetHeight + 'px';
+                         break;
+                         }
+                         move(aDivBg[index], {top: 0, left: 0});
+                    }
+                    aLi[i].onmouseleave = function (ev) {
+                        switch(getDir(ev,aLi[index])){
+                            case 0:
+                                move(aDivBg[index],{left:-aLi[0].offsetWidth,top:0});
+                                break;
+                            case 1:
+                                move(aDivBg[index],{left:0,top:aLi[0].offsetHeight});
+                                break;
+                            case 2:
+                                move(aDivBg[index],{left:aLi[0].offsetWidth,top:0});
+                                break;
+                            case 3:
+                                move(aDivBg[index],{left:0,top:-aLi[0].offsetHeight});
+                                break;
+                        }
+                    }
+                })(i);
+            }
+        }
+    })()
+
     
 },false)
