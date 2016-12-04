@@ -1,0 +1,47 @@
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+//混合
+.border(@color:#e7e7e7){
+  border: 1px solid @color;
+}
+.style(@width;@height){
+  width: @width;
+  height:@height;
+}
+.pos(r,@t,@l){
+  position: relative;
+  top: @t;
+  left: @l;
+}
+.pos(a,@t,@l){
+  position: absolute;
+  top: @t;
+  left: @l;
+}
+.pos(f,@t,@l){
+  position: fixed;
+  top: @t;
+  left: @l;
+}
+/*基本资料*/
+.basic-data{
+  header{
+    span{
+      margin-top: 0;
+      font-size: 26px;
+    }
+    nav a{
+      font-size: 20px;
+      padding: 6px 8px;
+    }
+  }
+}

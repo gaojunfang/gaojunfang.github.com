@@ -14,7 +14,7 @@
   font-size: 24px;
 }
 .basic-data section {
-  margin-top: 50px;
+  margin-top: 3%;
 }
 .basic-data section .small-portrait {
   animation: portrait 2s;
@@ -31,7 +31,7 @@
   }
 }
 .basic-data section .personal {
-  margin-top: 60px;
+  margin-top: 5%;
   animation: personal 2s;
 }
 @keyframes personal {
@@ -46,5 +46,18 @@
   }
 }
 .basic-data section .down {
-  margin-top: 70px;
+  bottom: 5%;
+}
+#page2 .text-ul {
+  width: 72%;
+  font-size: 24px;
+}
+#page3 .skill-text {
+  font-size: 20px;
+}
+#page4 .project-list ul li {
+  height: 190px;
+}
+#page6 ul.con_style li p {
+  font-size: 22px;
 }

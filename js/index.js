@@ -50,14 +50,14 @@ document.addEventListener('DOMContentLoaded',function () {
     var aPage = document.querySelectorAll('.page');
     //设置页面高度
     (function () {
-        var height = document.documentElement.clientHeight || document.body.clientHeight
+        var height = document.documentElement.clientHeight || document.body.clientHeight;
         for(var i=0; i<aPage.length; i++){
             aPage[i].style.height = height+'px';
         }
         //设置页面跳转
         // aPage[0].style.transform = 'scale(1)';
         // aPage[0].style.height = height+'px';
-        aPage[3].style.display = 'block';
+        aPage[0].style.display = 'block';
         var oNav = document.querySelector('nav');
         var aA = oNav.querySelectorAll('a');
         for(var i=0; i<aA.length; i++){
@@ -216,6 +216,7 @@ document.addEventListener('DOMContentLoaded',function () {
             }
         }
     })()
+    //自我评价，自动播放
 
     
 },false)

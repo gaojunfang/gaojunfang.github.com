@@ -1,0 +1,20 @@
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.text-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*基本资料*/
+.basic-data header span {
+  margin-top: 0;
+  font-size: 26px;
+}
+.basic-data header nav a {
+  font-size: 20px;
+  padding: 6px 8px;
+}

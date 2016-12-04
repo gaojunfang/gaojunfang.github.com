@@ -4,6 +4,9 @@
     font-family: 'youyuan';
     src:url("../fonts/youyuan.TTF");
 }
+html,body{
+    font-size: 24px;
+}
 body { margin: 0; font-family: 'youyuan','microsoft yahei','Hiragino Sans GB',arial,sans-serif; line-height: 1.5; color: #666; background-color: #fff; }
 a {color: #666;text-decoration: none;}
 a:hover, a:focus {color: #ff9400; text-decoration: underline;}
@@ -16,3 +19,4 @@ li{ list-style:none;}
 .fr{float:right;}
 table{border-collapse:collapse;}
 td,th{border:1px solid red; padding:0;}
+i,em{font-style: normal;}
