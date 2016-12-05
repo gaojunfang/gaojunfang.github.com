@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded',function () {
         //设置页面跳转
         // aPage[0].style.transform = 'scale(1)';
         // aPage[0].style.height = height+'px';
-        aPage[5].style.display = 'block';
+        aPage[3].style.display = 'block';
         var oNav = document.querySelector('nav');
         var aA = oNav.querySelectorAll('a');
         for(var i=0; i<aA.length; i++){
@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded',function () {
 
                 (function (index) {
                     aLi[i].onmouseenter = function (ev) {
-                        console.log(getDir(ev,aLi[index]))
+                        //console.log(getDir(ev,aLi[index]))
                         switch (getDir(ev,aLi[index])) {
                          case 0:
                          aDivBg[index].style.left = -aLi[0].offsetWidth + 'px';
