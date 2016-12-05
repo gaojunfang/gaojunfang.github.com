@@ -119,9 +119,44 @@ body {
   text-align: center;
   font-size: 30px;
 }
+/*公共剪刀*/
+@keyframes scissors-w {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+@-webkit-keyframes scissors-w {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
+.scissors-outer {
+  width: 100%;
+  margin: 24px auto;
+}
+.scissors-outer .scissors {
+  width: 100%;
+  border-bottom: 1px dashed #55c1e5;
+  position: relative;
+  animation: scissors-w 25s linear 1s infinite;
+}
+.scissors-outer .scissors span {
+  width: 20px;
+  height: 20px;
+  background: url(../img/icon.png) no-repeat -37px -50px #f4f4f4;
+  position: absolute;
+  top: -8px;
+  right: 0;
+}
 #page2 {
   font-size: 26px;
-  padding: 60px;
+  padding: 24px 60px;
   background: url("../img/zlbg.png") no-repeat 100% 100%;
 }
 #page2 .small-portrait {
@@ -164,11 +199,11 @@ body {
   line-height: 1.6;
 }
 #page3 {
-  padding: 60px;
+  padding: 24px 60px;
   font-size: 22px;
 }
 #page3 .skill-canvas {
-  margin-top: 30px;
+  margin-top: 10px;
   width: 50%;
   float: left;
 }
@@ -189,7 +224,7 @@ body {
   padding: 20px;
 }
 #page3 .skill-text {
-  margin-top: 30px;
+  margin-top: 10px;
   width: 50%;
   float: right;
 }
@@ -224,7 +259,7 @@ aside ul li span {
   font-size: 16px;
 }
 #page4 {
-  padding: 60px;
+  padding: 24px 60px;
 }
 #page4 .project-list {
   margin-top: 30px;
@@ -262,7 +297,7 @@ aside ul li span {
   }
 }
 #page5 {
-  padding: 60px 0 ;
+  padding: 24px 0 ;
 }
 #page5 .img-outer {
   width: 100%;
@@ -311,10 +346,10 @@ aside ul li span {
   background: #80d6f2;
 }
 #page6 {
-  padding: 60px;
+  padding: 24px 60px;
 }
 #page6 .contact_detail {
-  padding: 0 60px;
+  padding: 0 0px;
 }
 #page6 ul.con_style {
   overflow: hidden;
@@ -350,7 +385,7 @@ aside ul li span {
   background-position: -100px -70px;
 }
 #page6 .contact_info {
-  width: 90%;
+  width: 96%;
   margin: 0 auto;
 }
 #page6 .contact_info form {
@@ -389,6 +424,7 @@ aside ul li span {
 }
 #page6 .contact_info form .contact_info_r label p {
   text-align: right;
+  font-size: 16px;
 }
 #page6 .contact_info form label {
   width: 100%;

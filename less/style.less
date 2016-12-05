@@ -139,9 +139,45 @@ body{
     font-size: 30px;
   }
 }
+/*公共剪刀*/
+@keyframes scissors-w {
+  from{
+    width: 100%;
+  }
+  to{
+    width: 0%;
+  }
+}
+@-webkit-keyframes scissors-w {
+  from{
+    width: 100%;
+  }
+  to{
+    width: 0%;
+  }
+}
+.scissors-outer{
+  width: 100%;
+  margin: 24px auto;
+  .scissors{
+    width: 100%;
+    border-bottom: 1px dashed #55c1e5;
+    position: relative;
+    animation: scissors-w 25s linear 1s infinite;
+    span{
+      width: 20px;
+      height: 20px;
+      background: url(../img/icon.png) no-repeat -37px -50px #f4f4f4;
+      position: absolute;
+      top: -8px;
+      right: 0;
+    }
+  }
+}
+
 #page2{
   font-size: 26px;
-  padding: 60px;
+  padding: 24px 60px;
   background: url("../img/zlbg.png") no-repeat 100% 100%;
   .small-portrait{
     .style(200px,200px);
@@ -187,10 +223,10 @@ body{
 }
 
 #page3{
-  padding: 60px;
+  padding: 24px 60px;
   font-size: 22px;
   .skill-canvas{
-    margin-top: 30px;
+    margin-top: 10px;
     width: 50%;
     float: left;
     .canvas_con{
@@ -209,7 +245,7 @@ body{
     }
   }
   .skill-text{
-    margin-top: 30px;
+    margin-top: 10px;
     width: 50%;
     float: right;
   }
@@ -245,7 +281,7 @@ aside{
 }
 
 #page4{
-  padding: 60px;
+  padding: 24px 60px;
   .project-list{
     margin-top: 30px;
     ul li{
@@ -284,7 +320,7 @@ aside{
   }
 }
 #page5{
-  padding: 60px 0 ;
+  padding: 24px 0 ;
   .img-outer{
     .style(100%,300px);
     margin-top: 30px;
@@ -331,9 +367,9 @@ aside{
 }
 
 #page6{
-  padding: 60px;
+  padding: 24px 60px;
   .contact_detail{
-    padding: 0 60px;
+    padding: 0 0px;
   }
 
   ul.con_style{
@@ -370,7 +406,7 @@ aside{
     }
   }
   .contact_info{
-    width: 90%;
+    width: 96%;
     margin: 0 auto;
     form{
       width: 100%;
@@ -407,6 +443,7 @@ aside{
         label{
           p{
             text-align:right;
+            font-size: 16px;
           }
         }
       }

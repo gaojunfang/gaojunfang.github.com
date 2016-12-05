@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded',function () {
         //设置页面跳转
         // aPage[0].style.transform = 'scale(1)';
         // aPage[0].style.height = height+'px';
-        aPage[0].style.display = 'block';
+        aPage[5].style.display = 'block';
         var oNav = document.querySelector('nav');
         var aA = oNav.querySelectorAll('a');
         for(var i=0; i<aA.length; i++){
@@ -113,18 +113,18 @@ document.addEventListener('DOMContentLoaded',function () {
                     deg+=4;
                     strokeCan(deg);
                     console.log(deg);
-                    if(deg>234){
+                    if(deg>n){
                         clearInterval(gd.timer);
                     }
                 }
             },30)
         }
-        strkeSkill(oH5c,314,"#F1652A");
-        strkeSkill(oC3c,314,"#409AD8");
-        strkeSkill(oJsc,180,"#ECB12C");
-        strkeSkill(oJqc,198,"#75B143");
-        strkeSkill(oBsc,162,"#583F85");
-        strkeSkill(oPsc,198,"#031A3A");
+        strkeSkill(oH5c,243,"#F1652A");
+        strkeSkill(oC3c,243,"#409AD8");
+        strkeSkill(oJsc,203,"#ECB12C");
+        strkeSkill(oJqc,216,"#75B143");
+        strkeSkill(oBsc,189,"#583F85");
+        strkeSkill(oPsc,216,"#031A3A");
 
 
     })();
@@ -215,8 +215,42 @@ document.addEventListener('DOMContentLoaded',function () {
                 })(i);
             }
         }
-    })()
+    })();
     //自我评价，自动播放
+    (function () {
+        var imgOuter = document.querySelector('.img-outer');
+        var oUl = imgOuter.querySelector('ul');
+        var oOl = imgOuter.querySelector('ol');
+        var aUlLi = oUl.querySelectorAll('li');
+        var aOlLi = oOl.querySelectorAll('li');
+        var iNow = 0;
+        
+        for(var i=0; i<aOlLi.length; i++){
+            aOlLi[i].dataset.index = i;
+            aOlLi[i].onclick = function () {
+                iNow=this.dataset.index;
+                tab()
+            }
+        }
+        function tab() {
+            for(var j=0; j<aOlLi.length; j++){
+                aUlLi[j].classList.remove('on');
+                aOlLi[j].classList.remove('on');
+            }
+            aOlLi[iNow].classList.add('on');
+            aUlLi[iNow].classList.add('on');
+        }
+
+        //下一个
+        function next(){
+            iNow++
+            if(iNow==aOlLi.length){
+                iNow=0;
+            }
+            tab()
+        }
+        setInterval(next,1500)
+    })();
 
     
 },false)
